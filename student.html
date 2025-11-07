@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard" id="studentDashboard">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Welcome, <span id="welcomeUser"></span>!</h1>
+                    <p class="user-info">Role: Student</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary" id="changePasswordBtn">Change Password</button>
+                    <button class="btn btn-danger" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+            
+            <div class="welcome-box">
+                <h1>🎓</h1>
+                <p>You have successfully logged in as a student.</p>
+                <p>This is your personal dashboard.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="changePasswordModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Change Password</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="changePasswordForm">
+                <div class="input-group">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword" required>
+                </div>
+                <div class="input-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirmNewPassword">Confirm New Password</label>
+                    <input type="password" id="confirmNewPassword" required>
+                </div>
+                <div id="passwordError" class="error"></div>
+                <button type="submit" class="btn">Change Password</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

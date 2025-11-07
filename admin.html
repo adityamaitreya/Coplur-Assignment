@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard" id="adminDashboard">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p class="user-info">Logged in as: <span id="welcomeUser"></span></p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" id="addUserBtn">Add User</button>
+                    <button class="btn btn-secondary" id="changePasswordBtn">Change Password</button>
+                    <button class="btn btn-danger" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+            
+            <h2>User Management</h2>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="addUserModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New User</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="addUserForm">
+                <div class="input-group">
+                    <label for="newUsername">Username</label>
+                    <input type="text" id="newUsername" required>
+                </div>
+                <div class="input-group">
+                    <label for="newPassword">Password</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="input-group">
+                    <label for="newRole">Role</label>
+                    <select id="newRole" required>
+                        <option value="student">Student</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div id="addUserError" class="error"></div>
+                <button type="submit" class="btn">Create User</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="changePasswordModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Change Password</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="changePasswordForm">
+                <div class="input-group">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword" required>
+                </div>
+                <div class="input-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirmNewPassword">Confirm New Password</label>
+                    <input type="password" id="confirmNewPassword" required>
+                </div>
+                <div id="passwordError" class="error"></div>
+                <button type="submit" class="btn">Change Password</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

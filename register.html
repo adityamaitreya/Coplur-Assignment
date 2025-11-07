@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - User Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1>Register as Student</h1>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="regUsername">Username</label>
+                    <input type="text" id="regUsername" required>
+                </div>
+                <div class="input-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" required>
+                    <small style="color: #666;">Min 6 characters with uppercase, lowercase & number</small>
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div id="error" class="error"></div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p class="link">Already have an account? <a href="index.html">Login</a></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
