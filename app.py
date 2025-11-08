@@ -5,7 +5,6 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__, static_folder='static')
-app.config['SECRET_KEY'] = 'your-secret-key-change-in-production'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
@@ -195,3 +194,4 @@ def delete_user(username):
 if __name__ == '__main__':
     init_db()
     app.run(debug=True, port=5000)
+
